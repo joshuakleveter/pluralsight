@@ -88,3 +88,17 @@ JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g
     - `const A;` - Block scoped constant.
     - `function a() {}` - Function declaration.
 - Blocks are declared with a pair of curly braces.
+
+## Conditional Statements
+
+- `if ()` statements will always evaluate to a final true or false value.
+- Falsy values are:
+  - 0
+  - -0
+  - NaN
+  - ''
+  - false
+  - null
+  - undefined
+- Anything else is a truthy value.
+- Truthy values coerce to `true`, falsy values coerce to `false`.
