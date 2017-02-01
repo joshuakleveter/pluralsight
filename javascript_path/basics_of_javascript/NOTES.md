@@ -77,3 +77,14 @@ JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g
 - Make a practice of writing well-commented code.
 - Comments should not say _what_ you are doing. They should say _why_ you are doing it OR _how_ you are doing something.
 - Be as verbose as necessary, but no more.
+
+## Variables and Blocks
+
+- Every variable that you use should be formally declared.
+  - And it should be declared _before_ you use it!
+  - They may be declared in one of the following ways:
+    - `var a;` - Function scoped variable.
+    - `let a;` - Block scoped variable.
+    - `const A;` - Block scoped constant.
+    - `function a() {}` - Function declaration.
+- Blocks are declared with a pair of curly braces.
