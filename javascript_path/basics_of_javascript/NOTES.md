@@ -36,3 +36,10 @@ JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g
   - Then runs.
 - **Interpreted Language:** Takes only a _single pass_ through the code.
   - A single pass converts and runs code.
+
+## Input and Output
+
+- `alert("Hello World!");` statement
+  - This statement is part of the DOM API.
+- `console.log("Hello World!");` is more common.
+- `prompt()` requests input from the user.
