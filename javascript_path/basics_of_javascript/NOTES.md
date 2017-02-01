@@ -148,3 +148,10 @@ while (true) {
 - Declaring a `var` within a function makes it available only within the function.
 - You can _always_ access vars outside of your current scope.
 - You can _never_ access vars in a scope below your current scope.
+
+## ES6
+
+- `const` is standard in ES6 for declaring constants
+- Use transpilers for ES6 compatibilty
+  - e.g. Babel.js
+- Use new standards now for future compatibilty.
