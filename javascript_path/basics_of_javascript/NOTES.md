@@ -102,3 +102,35 @@ JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g
   - undefined
 - Anything else is a truthy value.
 - Truthy values coerce to `true`, falsy values coerce to `false`.
+
+## Loops
+
+- Conditionals also appear in loops.
+
+- For loop
+  - `for (a = 5; a < 10; a++) { .. }`
+  - (initialization clause, conditional clause, update clause)
+
+- Loops will run until a conditional fails.
+- Loops can be stopped with the `break` statement.
+
+This `for` loop:
+
+```JavaScript
+for (a = 5; a < 10; a++) {
+  console.log(a);
+}
+```
+
+is conceptually the same as this `while` loop:
+
+```JavaScript
+var a = 5;
+while (true) {
+  if (a >= 10) {
+    break;
+  }
+  console.log(a);
+  a += 1;
+}
+```
