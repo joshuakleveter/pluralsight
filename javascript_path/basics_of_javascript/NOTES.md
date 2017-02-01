@@ -26,3 +26,13 @@ With statement marks:
 ```
 
 - It is often helpful to add additional notation to clarify operator precidence in your program.
+
+## Executing programs
+
+JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g. Bash)
+
+- **Compiled Language:** Takes _more than one_ pass through the code.
+  - First compiles. Checks validity, etc. Like a proofreader.
+  - Then runs.
+- **Interpreted Language:** Takes only a _single pass_ through the code.
+  - A single pass converts and runs code.
