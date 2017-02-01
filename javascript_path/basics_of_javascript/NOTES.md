@@ -43,3 +43,19 @@ JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g
   - This statement is part of the DOM API.
 - `console.log("Hello World!");` is more common.
 - `prompt()` requests input from the user.
+
+## Operators
+
+- There are sometimes multiple ways to do the same thing.
+  - `a = a + 2` and `a += 2`
+
+- Readability is completely subjective.
+
+- Most important operators are:
+  - `=` _assignment_ operator.
+  - `+ - * /` _math_ operators.
+  - Equality operators:
+    - `==` - loose-equals
+    - `===` - strict-equals
+    - `!=` - loose-not-equals
+    - `!==` - strict-not-equals
