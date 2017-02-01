@@ -9,3 +9,20 @@
   - Statement: `a = b * 2;`
     - `2`: A _literal_ value.
     - `b`: A variable.
+
+## Expressions
+
+Example expression:
+
+```JavaScript
+a = b * 2 + foo(c * 3);
+```
+
+With statement marks:
+
+```JavaScript
+(a = (((b) * (2)) + (foo(((c) * (3))))));
+[ [a] = [ [[b] * [2]] + [ [foo]( [[c] * [3]] ) ] ] ];
+```
+
+- It is often helpful to add additional notation to clarify operator precidence in your program.
