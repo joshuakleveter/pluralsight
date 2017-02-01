@@ -69,3 +69,11 @@ JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g
 - In JavaScript we refer to type _coercion_ when changing a value's type.
   - We also have _explicit_ and _implicit_ coercion.
 - In JavaScript variables do not have types. Values _do_ have types.
+
+## Code Comments
+
+- Comments are another way to make your code more understandable.
+- They are critical!
+- Make a practice of writing well-commented code.
+- Comments should not say _what_ you are doing. They should say _why_ you are doing it OR _how_ you are doing something.
+- Be as verbose as necessary, but no more.
