@@ -59,3 +59,13 @@ JavaScript is a Just-In-Time compiled language. NOT an interpreted lanugage (e.g
     - `===` - strict-equals
     - `!=` - loose-not-equals
     - `!==` - strict-not-equals
+
+## Values and Types
+
+- `42` is a number; `"42"` is a string.
+- Strings can be single or double quoted.
+  - Pick one style and do not change! Either is valid.
+  - Double quotes are more common.
+- In JavaScript we refer to type _coercion_ when changing a value's type.
+  - We also have _explicit_ and _implicit_ coercion.
+- In JavaScript variables do not have types. Values _do_ have types.
