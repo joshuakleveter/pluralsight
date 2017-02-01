@@ -134,3 +134,10 @@ while (true) {
   a += 1;
 }
 ```
+
+## Functions
+
+- Functions are for a logical grouping of tasks.
+- Functions can take one or more arguments.
+- Functions can have parameters declared in the function declaration.
+- Functions can be passed into other functions.
