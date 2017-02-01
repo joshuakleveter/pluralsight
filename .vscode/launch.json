@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\javascript_path\\basics_of_javascript\\practice.js",
+            "program": "${workspaceRoot}\\javascript_path\\basics_of_javascript\\challenge.js",
             "cwd": "${workspaceRoot}"
         },
         {
