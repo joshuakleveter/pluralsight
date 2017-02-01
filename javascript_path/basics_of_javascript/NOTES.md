@@ -141,3 +141,10 @@ while (true) {
 - Functions can take one or more arguments.
 - Functions can have parameters declared in the function declaration.
 - Functions can be passed into other functions.
+
+## Scope
+
+- Function parameters are only available within the function scope.
+- Declaring a `var` within a function makes it available only within the function.
+- You can _always_ access vars outside of your current scope.
+- You can _never_ access vars in a scope below your current scope.
