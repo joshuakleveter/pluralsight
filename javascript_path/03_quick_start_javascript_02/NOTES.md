@@ -14,3 +14,8 @@
 - `do { .. } while ();`
   - This loop will always run at least one time.
 - `while () { .. }`
+
+## Functions
+
+- Use functions to avoid repetition of code.
+
