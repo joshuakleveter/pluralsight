@@ -27,3 +27,13 @@
 - Use `console.log();` to output information from the console.
 - Use `console.warn();` to output warnings from the console.
 - Use `console.error();` to output errors from the console.
+
+## Strings, Numbers, and Booleans
+
+- Primitive data types:
+  - String: `"Hello"`, `"5793"`
+  - Number: `234`, `0.94`
+  - Boolean: `true`, `false`
+  - Null: `null`
+  - Undefined: `undefined`
+- Use `typeof();` to get data type info.
