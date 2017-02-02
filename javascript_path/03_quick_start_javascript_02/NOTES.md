@@ -5,3 +5,6 @@
 - The `switch () { .. }` statement is an alternative to if/else.
 - You can continue to run cases if the break statement is omitted.
 
+## For Loops
+
+- Example syntax: `for (var i = 0; i <= a; i++) { .. }`
