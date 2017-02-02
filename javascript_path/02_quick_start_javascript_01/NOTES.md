@@ -21,3 +21,9 @@
   - Division: `/`
   - Modulo (Remainder): `%`
   - Keep order of operations in mind!
+
+## The Console
+
+- Use `console.log();` to output information from the console.
+- Use `console.warn();` to output warnings from the console.
+- Use `console.error();` to output errors from the console.
