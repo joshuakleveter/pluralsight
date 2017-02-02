@@ -1,6 +1,6 @@
 # Quick Start to JavaScript - Vol. 1
 
-## What is JavaScript?
+## What is JavaScript
 
 - It has nothing to do with Java. This was a marketing stunt.
 - Developed by Netscape in 1995.
