@@ -8,3 +8,9 @@
 ## For Loops
 
 - Example syntax: `for (var i = 0; i <= a; i++) { .. }`
+
+## While Loops
+
+- `do { .. } while ();`
+  - This loop will always run at least one time.
+- `while () { .. }`
