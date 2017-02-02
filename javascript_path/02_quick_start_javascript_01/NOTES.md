@@ -47,3 +47,7 @@
   - Contain spaces.
   - Contain reserved words.
   - No puncuation besides $ or _
+
+## Flow Control
+
+- Use if/else statements to run code only when a condition is met.
