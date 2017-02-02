@@ -55,3 +55,8 @@
 ## Using else if
 
 - `else if` statements allow for additional possibilities in an `if/else` block.
+
+## Comparison Operators
+
+- And operator: `&&`
+- Not operator: `!`
