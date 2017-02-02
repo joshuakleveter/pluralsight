@@ -37,3 +37,13 @@
   - Null: `null`
   - Undefined: `undefined`
 - Use `typeof();` to get data type info.
+
+## Variables
+
+- Declare variables with this syntax:
+  - `var name = value;`
+- Variable names cannot:
+  - Start with a number.
+  - Contain spaces.
+  - Contain reserved words.
+  - No puncuation besides $ or _
