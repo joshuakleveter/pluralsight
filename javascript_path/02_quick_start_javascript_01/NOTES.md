@@ -51,3 +51,7 @@
 ## Flow Control
 
 - Use if/else statements to run code only when a condition is met.
+
+## Using else if
+
+- `else if` statements allow for additional possibilities in an `if/else` block.
