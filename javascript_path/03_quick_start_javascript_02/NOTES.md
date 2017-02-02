@@ -19,3 +19,9 @@
 
 - Use functions to avoid repetition of code.
 
+## Arrays
+
+- Arrays allow us to store a list of information.
+- Arrays are stored in variables.
+- Declare an array with square bracket syntax:
+  - `var myArray = [ .. ];`
