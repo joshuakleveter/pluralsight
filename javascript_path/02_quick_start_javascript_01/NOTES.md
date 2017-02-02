@@ -11,3 +11,13 @@
 
 - [hello.html](./hello.html)
 - [hello.js](./hello.js)
+
+## Operators
+
+- Math:
+  - Addition: `+`
+  - Subtraction: `-`
+  - Multiplication: `*`
+  - Division: `/`
+  - Modulo (Remainder): `%`
+  - Keep order of operations in mind!
