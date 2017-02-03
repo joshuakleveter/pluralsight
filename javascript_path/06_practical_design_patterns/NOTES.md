@@ -87,6 +87,8 @@ function ObjectName (param1, param2) {
 }
 ```
 
+See [task.js](./task.js) for an in-depth example.
+
 With the above example we re-create the `toString()` method for each object.
 Use prototypes instead.
 
