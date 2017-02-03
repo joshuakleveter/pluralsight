@@ -52,3 +52,16 @@ var joe = new Friend("Joe", 20, "brown");
   - Use local scope whenever possible to avoid conflicts.
 - You can always access scope(s) outside of your current scope.
 - Namespacing is another possibility.
+
+## Coding Conventions
+
+You should always follow coding conventions to make sure that
+other devs can easily read your code.
+
+Use a linter (JSHint, JSLint, ESLint) to check your code for errors
+and coding convention errors.
+
+Get in the habit of consitently formatting your code for easier reading.
+
+Most people use spaces over tabs for indentation.
+But whatever you choose; stick with it!
