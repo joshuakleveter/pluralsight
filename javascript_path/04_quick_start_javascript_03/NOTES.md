@@ -45,3 +45,10 @@ var joe = new Friend("Joe", 20, "brown");
 - Function code can access global variables.
 - JavaScript has function based scope.
 - When you create a variable inside of a function it is a _local_ variable.
+
+## Understanding Scope
+
+- Be careful when using global scope.
+  - Use local scope whenever possible to avoid conflicts.
+- You can always access scope(s) outside of your current scope.
+- Namespacing is another possibility.
