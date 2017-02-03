@@ -33,3 +33,9 @@ var joe = new Friend("Joe", 20, "brown");
 - Host objects are defined by the environment.
 - Core objects are defined by the JS spec.
 - Other objects are defined by the coder.
+
+## This and the Global Object
+
+- In the browser the global object is `Window`
+- All the code you write is added as a property or method to the global object.
+- Be careful not to override other properties and methods in the global scope!
