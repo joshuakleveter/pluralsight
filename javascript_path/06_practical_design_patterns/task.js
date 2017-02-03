@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Example of the Constructor pattern
  */
