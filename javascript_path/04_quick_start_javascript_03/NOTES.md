@@ -39,3 +39,9 @@ var joe = new Friend("Joe", 20, "brown");
 - In the browser the global object is `Window`
 - All the code you write is added as a property or method to the global object.
 - Be careful not to override other properties and methods in the global scope!
+
+## Local and Global scope
+
+- Function code can access global variables.
+- JavaScript has function based scope.
+- When you create a variable inside of a function it is a _local_ variable.
