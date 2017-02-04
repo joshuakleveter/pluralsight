@@ -168,3 +168,7 @@ that object again it will simply hand the same object back to you.
 
 **Remember:** Node.js uses CommonJS. This makes to creation of singletons
 much easier.
+
+**In Node.js** rather than exporting a function we can execute the funtion
+in `module.export`. CommonJS will then cache the returned object, effectively
+creating a singleton.

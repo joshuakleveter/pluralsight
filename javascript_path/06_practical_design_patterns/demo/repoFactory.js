@@ -17,4 +17,5 @@ var repoFactory = function () {
     });
 }
 
+// Note the use of the `new` keyword. This is a singlton.
 module.exports = new repoFactory;

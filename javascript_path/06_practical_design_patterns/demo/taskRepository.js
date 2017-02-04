@@ -21,5 +21,6 @@ var repo = function () {
 /**
  * NOTE: As we are executing the repo() function with module.exports
  * the actual value of module.exports _is_ the return value of repo().
+ * It's also a singleton.
  */
 module.exports = repo();
