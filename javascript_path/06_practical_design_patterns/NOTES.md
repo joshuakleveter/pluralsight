@@ -179,3 +179,12 @@ Concerned with makeup of objects and relationships between objects.
 
 They can extend OR simplify functionality.
 
+### Decorator Pattern
+
+Add new functionality to an existing object without being obtrusive.
+
+- More complete inheritance.
+- Wraps an object.
+- Protects existing objects.
+- Allows extended functionality.
+
