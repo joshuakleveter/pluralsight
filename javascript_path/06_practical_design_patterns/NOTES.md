@@ -200,3 +200,19 @@ It hides the chaotic subsystem from us so we have a simplified interface.
 jQuery is the best known example of a facade pattern in real life.
 
 A decorator _adds_ functionality. A facade _cleans up_ messy functionality.
+
+### Flyweight Pattern
+
+Conserve memory by sharing portions of an object between objects.
+
+Our tasks have a lot of non-unique data. This should be shared between tasks.
+
+Share data across objects.
+
+This is very similar to prototypes.
+
+Results in a smaller memory footprint.
+Our goal is the smallest memory footprint possible.
+
+**BUT** Only useful if you have a **HUGE** number of objects.
+100 to 500 _is not sufficient_.
