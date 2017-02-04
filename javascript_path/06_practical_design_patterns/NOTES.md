@@ -158,3 +158,13 @@ A very common example of this in Node.js development is the
 
 See [repoFactory.js](./demo/repoFactory.js) for an example of the preferred
 way to build a Factory pattern in JS.
+
+### Singleton Pattern
+
+Use to restrict an object to a single instance across app.
+
+A singleton will remember the instance that you've created. If you request'
+that object again it will simply hand the same object back to you.
+
+**Remember:** Node.js uses CommonJS. This makes to creation of singletons
+much easier.
