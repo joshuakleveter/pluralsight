@@ -1,35 +1,15 @@
 "use strict";
 
-/**
- * This is a decorator for the Task constructor
- * 
- * This is an example of _simple_ decoration.
- */
-
-// var Task = require("./task");
-
-// var urgentTask = new Task({name: "Urgent Task"});
-// urgentTask.priority = 2;
-// urgentTask.notify = function () {
-//     console.log("This task is urgent");
-// };
-// urgentTask.save = function () {
-//     this.notify();
-//     Task.prototype.save.call(this);
-// };
-
-// urgentTask.save();
-// urgentTask.complete();
-
-/**
- * This is a decorator for the Task constructor
- * 
- * Below is an example of a proper decorator that extends
- * the original constructor via the prototype chain
- */
-
 var Task = require("./task");
 
+/**
+ * Create UrgentTask objects.
+ * 
+ * @param {string} name
+ * @param {number} priority
+ * 
+ * @returns {Object}
+ */
 function UrgentTask (name, priority) {
     Task.call(this, {
         name: name
@@ -39,10 +19,16 @@ function UrgentTask (name, priority) {
 UrgentTask.prototype = Object.create(Task.prototype);
 UrgentTask.prototype.constructor = UrgentTask;
 
+/**
+ * Notify important people about this task.
+ */
 UrgentTask.prototype.notify = function () {
     console.log("This task is urgent!");
 }
 
+/**
+ * Save this task.
+ */
 UrgentTask.prototype.save = function () {
     this.notify();
     Task.prototype.save.call(this);
