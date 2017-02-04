@@ -97,3 +97,15 @@ We create an object and then make copies of it.
 Using closure scope to access properties.
 
 Each object should be created in it's own file.
+
+### Module Pattern
+
+The Module pattern is a way of encapsulating a group of like methods.
+Think of it like a toolbox. You'll create a "toolbox" of methods.
+
+A module pattern is basically just an object literal with key-value pairs.
+The big thing here is that we have private variables.
+
+Generally a Module is only used when you need only one of something.
+
+**The `new` keyword is not used with a Module.**
