@@ -1,6 +1,7 @@
 var Task = require("./task");
+var Repo = require("./taskRepository");
 
-var task1 = new Task("Learn JavaScript patterns");
+var task1 = new Task(Repo.get(1));
 var task2 = new Task("Build a demo project");
 var task3 = new Task("Learn React.js");
 var task4 = new Task("Learn C#");

@@ -5,8 +5,8 @@
  */
 
 // First we create the constructor function.
-var Task = function (name) {
-    this.name = name;
+var Task = function (data) {
+    this.name = data.name;
     this.completed = false;
 }
 
