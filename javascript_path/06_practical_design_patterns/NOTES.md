@@ -95,3 +95,5 @@ Use prototypes instead.
 We create an object and then make copies of it.
 
 Using closure scope to access properties.
+
+Each object should be created in it's own file.
