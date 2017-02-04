@@ -188,3 +188,5 @@ Add new functionality to an existing object without being obtrusive.
 - Protects existing objects.
 - Allows extended functionality.
 
+Using this pattern we completely avoid breaking the functionality of
+the parent object.
