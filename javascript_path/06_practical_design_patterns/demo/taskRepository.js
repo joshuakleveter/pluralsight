@@ -9,6 +9,9 @@ var repo = function () {
             return {
                 name: "New task from db."
             };
+        },
+        save: function (task) {
+            console.log(`Saving ${task.name} to the database`);
         }
     };
 }
