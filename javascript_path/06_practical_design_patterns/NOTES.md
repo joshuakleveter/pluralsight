@@ -198,3 +198,5 @@ Provide a simplified interface to a complicated subsystem.
 It hides the chaotic subsystem from us so we have a simplified interface.
 
 jQuery is the best known example of a facade pattern in real life.
+
+A decorator _adds_ functionality. A facade _cleans up_ messy functionality.
