@@ -145,3 +145,16 @@ module.exports = repo();
 Factories are used to simplify the creation of an object.
 
 They create different objects based on the exact need.
+
+A simple factory will provide a single API to access multiple types of
+similar objects. A common example is if we need to access multiple datasets
+with identical APIs. Rather than require and create them individually we can
+create all of them through a single Factory object.
+
+The **preferred** way to use a Factory is to auto-load any objects that
+the Factory will provide access to and add their APIs to the Factory's scope.
+A very common example of this in Node.js development is the
+`gulp-load-plugins` package.
+
+See [repoFactory.js](./demo/repoFactory.js) for an example of the preferred
+way to build a Factory pattern in JS.
