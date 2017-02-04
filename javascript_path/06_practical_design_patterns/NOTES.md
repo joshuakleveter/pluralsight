@@ -172,3 +172,10 @@ much easier.
 **In Node.js** rather than exporting a function we can execute the funtion
 in `module.export`. CommonJS will then cache the returned object, effectively
 creating a singleton.
+
+## Structural Design Patterns
+
+Concerned with makeup of objects and relationships between objects.
+
+They can extend OR simplify functionality.
+
