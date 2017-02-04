@@ -190,3 +190,11 @@ Add new functionality to an existing object without being obtrusive.
 
 Using this pattern we completely avoid breaking the functionality of
 the parent object.
+
+### Facade Pattern
+
+Provide a simplified interface to a complicated subsystem.
+
+It hides the chaotic subsystem from us so we have a simplified interface.
+
+jQuery is the best known example of a facade pattern in real life.
