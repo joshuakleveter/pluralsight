@@ -139,3 +139,9 @@ var repo = function () {
 
 module.exports = repo();
 ```
+
+### Factory Pattern
+
+Factories are used to simplify the creation of an object.
+
+They create different objects based on the exact need.
