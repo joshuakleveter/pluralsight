@@ -1,3 +1,5 @@
+"use strict";
+
 var repoFactory = function () {
     var repos = this;
 

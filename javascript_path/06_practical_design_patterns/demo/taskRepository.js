@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * This file is responsible for all of our database calls.
  */
