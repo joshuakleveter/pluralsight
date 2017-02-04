@@ -3,22 +3,15 @@
 var Repos = require("./repoFactory");
 
 /**
- * Example of the Constructor pattern
- */
-
-// First we create the constructor function.
-/**
  * Constructor for Task objects.
- * Data parameter takes an object with the name value as a string.
  * 
- * @param {Object} data
+ * @param {Object} data Object with a 'name' value for the name of the task.
  */
 var Task = function (data) {
     this.name = data.name;
     this.completed = false;
 }
 
-// Next we'll add properties to the object prototype
 /**
  * Call this to complete the task.
  */
