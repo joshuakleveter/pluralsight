@@ -216,3 +216,5 @@ Our goal is the smallest memory footprint possible.
 
 **BUT** Only useful if you have a **HUGE** number of objects.
 100 to 500 _is not sufficient_.
+
+Flyweights are often used when dealing with massive data sets.
