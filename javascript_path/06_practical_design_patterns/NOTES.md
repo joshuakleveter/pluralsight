@@ -109,3 +109,33 @@ The big thing here is that we have private variables.
 Generally a Module is only used when you need only one of something.
 
 **The `new` keyword is not used with a Module.**
+
+We use modules to take advantage of closure scope so that we don't
+clutter the global scope with unneeded values.
+
+There is a commonly use alternative; the _Revealing Module_.
+In this pattern we create all of our methods in the closure scope,
+rather than in the return object. We then return references to the methods
+that we want to be public in the returned object. Here's an example:
+
+```JavaScript
+var repo = function () {
+       function get (id) {
+            console.log(`Getting task: ${id}`);
+            return {
+                name: "New task from db."
+            };
+        }
+
+        function save (task) {
+            console.log(`Saving ${task.name} to the database`);
+        }
+
+      return {
+          get: get,
+          save: save
+      };
+}
+
+module.exports = repo();
+```
