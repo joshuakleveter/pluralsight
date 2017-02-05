@@ -2,8 +2,6 @@
 
 /**
  * Factory for loading various repository constructors.
- * 
- * @returns {Object} instance of repoFactory
  */
 var repoFactory = function () {
     var repos = this;
