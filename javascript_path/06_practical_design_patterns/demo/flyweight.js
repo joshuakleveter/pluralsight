@@ -8,7 +8,7 @@ var Task = function (data) {
     );
 };
 
-function Flyweight (project, priority, user, completed) {
+function Flyweight(project, priority, user, completed) {
     this.project = project;
     this.priority = priority;
     this.user = user;
@@ -37,18 +37,18 @@ var FlyweightFactory = function () {
     };
 
     return {
-        get:get,
-        getCount:getCount
+        get: get,
+        getCount: getCount
     };
 }();
 
 
-function TaskCollection () {
+function TaskCollection() {
     var tasks = {};
     var count = 0;
 
     var add = function (data) {
-        tasks[data.name] = new Task (data);
+        tasks[data.name] = new Task(data);
         count++;
     };
 
@@ -93,10 +93,10 @@ var initialMemory = process.memoryUsage().heapUsed;
 for (var i = 0; i < 100000; i++) {
     tasks.add({
         name: `task${i}`,
-        priority: priorites[Math.floor( Math.random() * 5 )],
-        project: projects[Math.floor( Math.random() * 4 )],
-        user: users[Math.floor( Math.random() * 4 )],
-        completed: completed[Math.floor( Math.random() * 2 )]
+        priority: priorites[Math.floor(Math.random() * 5)],
+        project: projects[Math.floor(Math.random() * 4)],
+        user: users[Math.floor(Math.random() * 4)],
+        completed: completed[Math.floor(Math.random() * 2)]
     });
 }
 
