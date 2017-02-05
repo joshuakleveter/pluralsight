@@ -18,7 +18,7 @@ var repoFactory = function () {
     repoList.forEach( function (repo) {
         repos[repo.name] = require(repo.source);
     });
-}
+};
 
 // Note the use of the `new` keyword. This is a singlton.
 module.exports = new repoFactory;
