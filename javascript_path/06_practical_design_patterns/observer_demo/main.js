@@ -32,7 +32,7 @@ var auditingService = function () {
 
 var task1 = new ObservableTask({
     name: "Demo Task",
-    user: "Josh"
+    user: "Josh"    
 });
 
 var notifier = new notificationService();
