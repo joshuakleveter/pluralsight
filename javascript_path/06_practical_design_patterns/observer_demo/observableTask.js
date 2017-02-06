@@ -13,4 +13,13 @@ var ObservableTask = new function (data) {
 ObservableTask.prototype = Object.create(Task);
 ObservableTask.prototype.constructor = ObservableTask;
 
+/**
+ * Add a new observer to ObservableTask
+ * 
+ * @param {Object} observer Observer object
+ */
+ObservableTask.prototype.addObserver = function (observer) {
+    this.observers.add(observer);
+};
+
 module.exports = ObservableTask;
