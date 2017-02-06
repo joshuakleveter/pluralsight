@@ -259,4 +259,3 @@ Allows for a loosley coupled system.
 One object manages all communication.
 
 Many-to-many relationship.
-
