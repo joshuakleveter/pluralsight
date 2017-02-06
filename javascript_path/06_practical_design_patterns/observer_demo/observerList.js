@@ -49,4 +49,21 @@ ObserverList.prototype.removeAt = function (index) {
     this.observerList.splice(index, 1);
 };
 
+/**
+ * Get the index of an observer.
+ * 
+ * @param   {Object} observer observer to get the index of. 
+ * @returns {number}          Index of the observer.
+ *                            -1 if the observer was not found.
+ */
+ObserverList.prototype.indexOf = function (observer) {
+    for (var i = 0; i < this.observerList.length; i++) {
+        if (observer === this.observerList[i]) {
+            return i;
+        }
+    }
+
+    return -1;
+};
+
 module.exports = ObserverList;
