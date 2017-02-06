@@ -259,3 +259,15 @@ Allows for a loosley coupled system.
 One object manages all communication.
 
 Many-to-many relationship.
+
+### Command Pattern
+
+Encapsulates a command as an object.
+
+Fully decouples execution from implementation.
+
+Allows for a less fragile implementation.
+
+Supports undo operations.
+
+Supports logging and auditing of operations.
