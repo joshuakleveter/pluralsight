@@ -268,6 +268,8 @@ Fully decouples execution from implementation.
 
 Allows for a less fragile implementation.
 
-Supports undo operations.
+**Supports undo operations.**
 
 Supports logging and auditing of operations.
+
+This pattern is particularly powerful for auto-backup operations.
