@@ -30,6 +30,13 @@ var auditingService = function () {
     };
 };
 
+/**
+ * List of obervers for Task objects.
+ */
+var ObserverList = function () {
+    this.observerList = [];
+};
+
 var task1 = new Task({
     name: "Demo Task",
     user: "Josh"
