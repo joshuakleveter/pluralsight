@@ -44,3 +44,7 @@ task1.addObserver(logger.update);
 task1.addObserver(auditor.update);
 
 task1.save();
+
+task1.removeObserver(auditor.update);
+
+task1.save();
