@@ -46,6 +46,16 @@ ObservableTask.prototype.notify = function (context) {
 };
 
 /**
+ * Remove an observer from the ObservableTask
+ * 
+ * @param {Object} observer The observer object to remove
+ */
+ObservableTask.prototype.removeObserver = function (observer) {
+    var observerIndex = this.observers.indexOf(observer);
+    this.observers.removeAt(observerIndex);
+};
+
+/**
  * Save an observable task.
  */
 ObservableTask.prototype.save = function () {
