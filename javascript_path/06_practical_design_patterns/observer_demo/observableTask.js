@@ -22,6 +22,11 @@ ObservableTask.prototype.addObserver = function (observer) {
     this.observers.add(observer);
 };
 
+/**
+ * Notify observers of update.
+ * 
+ * @param {Object} context This context to run notify in.
+ */
 ObservableTask.prototype.notify = function (context) {
     var observerCount = this.observers.count();
 
@@ -33,6 +38,15 @@ ObservableTask.prototype.notify = function (context) {
     for (var i = 0; i < observerCount; i++) {
         this.observers.get(i)(context);
     }
+};
+
+/**
+ * Save an observable task.
+ */
+ObservableTask.prototype.save = function () {
+    this.notify(this);
+
+    Task.prototype.save.call(this);
 };
 
 module.exports = ObservableTask;
