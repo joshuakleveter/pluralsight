@@ -1,4 +1,4 @@
-var Task = require("./task");
+var ObservableTask = require("./observableTask");
 
 /**
  * Notify a user of task chagnes.
@@ -30,7 +30,7 @@ var auditingService = function () {
     };
 };
 
-var task1 = new Task({
+var task1 = new ObservableTask({
     name: "Demo Task",
     user: "Josh"
 });
