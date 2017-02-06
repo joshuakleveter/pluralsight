@@ -11,7 +11,7 @@ var ObserverList = require("./observerList");
  * @param {string}  data.project  Name of project to associate task with.
  * @param {string}  data.user     Name of the user associated with the task.
  */
-var ObservableTask = new function (data) {
+var ObservableTask = function (data) {
     Task.call(this, data);
     this.observers = new ObserverList();
 };
