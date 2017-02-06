@@ -37,6 +37,16 @@ var ObserverList = function () {
     this.observerList = [];
 };
 
+/**
+ * Add a new observer to the ObserverList
+ * 
+ * @param {Object} observer Object to add as an observer.
+ * @returns {number}        Length of the ObserverList.
+ */
+ObserverList.prototype.add = function (observer) {
+    return this.observerList.push(observer);
+};
+
 var task1 = new Task({
     name: "Demo Task",
     user: "Josh"
