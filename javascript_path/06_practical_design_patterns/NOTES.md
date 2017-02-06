@@ -218,3 +218,14 @@ Our goal is the smallest memory footprint possible.
 100 to 500 _is not sufficient_.
 
 Flyweights are often used when dealing with massive data sets.
+
+## Behavioral Design Patterns
+
+Assignment of responsibilites between objects
+and how they communicate with one another.
+
+Help multiple object cooperate with one another.
+
+Assign a clear heirarchy.
+
+Encapsualte requests.
