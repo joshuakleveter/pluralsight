@@ -4,7 +4,12 @@ var ObserverList = require("./observerList");
 /**
  * Extend Task with the ability to add observers.
  * 
- * @param {any} data
+ * @param {Object} data A JSON object with data for the task.
+ * @param {boolean} data.completed Is the task complete?
+ * @param {string}  data.name      Name of the task.
+ * @param {number}  data.priority Priority of the task from 1 to 5.
+ * @param {string}  data.project  Name of project to associate task with.
+ * @param {string}  data.user     Name of the user associated with the task.
  */
 var ObservableTask = new function (data) {
     Task.call(this, data);
