@@ -1,4 +1,8 @@
 # Directories to ignore
 
+## Node Modules
+
+node_modules
+
 ## Visual Studio Code configuration
 .vscode

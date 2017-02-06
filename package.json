@@ -1,0 +1,28 @@
+{
+  "name": "pluralsight",
+  "version": "0.0.0",
+  "description": "Notes and demos from Pluralsight courses.",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuakleveter/pluralsight.git"
+  },
+  "author": "Joshua Kleveter",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/joshuakleveter/pluralsight/issues"
+  },
+  "homepage": "https://github.com/joshuakleveter/pluralsight#readme"
+}
