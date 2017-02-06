@@ -19,3 +19,9 @@ repo.execute = function (name) {
 
     return false;
 };
+
+repo.execute('save', {
+    id: 1,
+    name: "Task 1",
+    completed: false
+});
