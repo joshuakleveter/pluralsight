@@ -16,6 +16,15 @@ ObserverList.prototype.add = function (observer) {
 };
 
 /**
+ * Get the length of the observerList
+ * 
+ * @returns {number} Length of the observerList
+ */
+ObserverList.prototype.count = function () {
+    return this.observerList.length;
+};
+
+/**
  * Get an observer from ObserverList.
  * 
  * @param   {number} index index of the observer to get.
