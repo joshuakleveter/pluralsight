@@ -229,3 +229,19 @@ Help multiple object cooperate with one another.
 Assign a clear heirarchy.
 
 Encapsualte requests.
+
+### Observer Pattern
+
+Allows a collection of objects to watch one object and
+be notified of changes when they happen.
+
+Allows for a loose-coupled system.
+
+One object is the focal point;
+group of objects watching for changes.
+
+We have the following items in the equation:
+
+- **Observers:** Objects watching the focal point.
+- **Subject:** Object decorated with a subject to watch.
+- **Notification:** Calback function, etc. sent to the observers on update.
