@@ -39,4 +39,8 @@ var notifier = new notificationService();
 var logger = new loggingService();
 var auditor = new auditingService();
 
+task1.addObserver(notifier.update);
+task1.addObserver(logger.update);
+task1.addObserver(auditor.update);
+
 task1.save();
