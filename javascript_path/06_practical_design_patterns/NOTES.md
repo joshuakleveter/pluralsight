@@ -249,3 +249,14 @@ We have the following items in the equation:
 **In summary:** we create a list of observers that need to be notified when
 the subject is updated. We then have a function that calls all of the
 observers in the list whenever the subject is updated.
+
+### Mediator Pattern
+
+Controls communication between objects to avoid coupling.
+
+Allows for a loosley coupled system.
+
+One object manages all communication.
+
+Many-to-many relationship.
+
