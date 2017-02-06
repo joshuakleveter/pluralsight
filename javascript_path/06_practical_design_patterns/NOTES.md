@@ -245,3 +245,7 @@ We have the following items in the equation:
 - **Observers:** Objects watching the focal point.
 - **Subject:** Object decorated with a subject to watch.
 - **Notification:** Calback function, etc. sent to the observers on update.
+
+**In summary:** we create a list of observers that need to be notified when
+the subject is updated. We then have a function that calls all of the
+observers in the list whenever the subject is updated.
