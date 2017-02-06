@@ -40,4 +40,11 @@ ObserverList.prototype.get = function (index) {
     }
 };
 
+/**
+ * Allow observers to opt-out of notifications.
+ */
+ObserverList.prototype.removeAt = function (index) {
+    this.observerList.splice(index, 1);
+};
+
 module.exports = ObserverList;
