@@ -8,8 +8,8 @@ var ObserverList = function () {
 /**
  * Add a new observer to the ObserverList
  * 
- * @param   {Object} observer Object to add as an observer.
- * @returns {number}        Length of the ObserverList.
+ * @param   {function} observer function to add as an observer.
+ * @returns {number}            Length of the ObserverList.
  */
 ObserverList.prototype.add = function (observer) {
     return this.observerList.push(observer);
@@ -42,6 +42,8 @@ ObserverList.prototype.get = function (index) {
 
 /**
  * Allow observers to opt-out of notifications.
+ * 
+ * @param {number} index index of the observer to remove.
  */
 ObserverList.prototype.removeAt = function (index) {
     this.observerList.splice(index, 1);
