@@ -15,7 +15,7 @@ var ObservableTask = function (data) {
     Task.call(this, data);
     this.observers = new ObserverList();
 };
-ObservableTask.prototype = Object.create(Task);
+ObservableTask.prototype = Object.create(Task.prototype);
 ObservableTask.prototype.constructor = ObservableTask;
 
 /**
