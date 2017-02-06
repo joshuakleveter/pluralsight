@@ -35,4 +35,8 @@ var task1 = new Task({
     user: "Josh"
 });
 
+var notifier = new notificationService();
+var logger = new loggingService();
+var auditor = new auditingService();
+
 task1.save();
