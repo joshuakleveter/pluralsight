@@ -63,3 +63,17 @@ provides the alternate. To change to the opposite state use the
 `.toggle()` function.
 
 For additional effect we can use `.fadeOut()` and `.fadeIn()`.
+
+## Events
+
+Use the document ready event to check if the page is fully loaded.
+
+Use the `.on()` function to handle events.
+
+Use the `.off()` function to remove a listner from an event.
+
+_We appear to be using the observer pattern here_.
+
+Use the `.one()` function to make sure an event is only handled once.
+
+Use the `.click()` function for specific handling of the click event.
