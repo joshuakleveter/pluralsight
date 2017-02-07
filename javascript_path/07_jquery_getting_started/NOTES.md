@@ -77,3 +77,8 @@ _We appear to be using the observer pattern here_.
 Use the `.one()` function to make sure an event is only handled once.
 
 Use the `.click()` function for specific handling of the click event.
+
+## Chaining
+
+jQuery allows us to chain functions with dot notation to avoid the
+inefficiency of re-selecting the elements for every manipulation.
