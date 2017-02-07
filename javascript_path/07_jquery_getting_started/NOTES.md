@@ -31,3 +31,17 @@ If there is no match for a jQuery selector you return an empty array.
 Many jQuery functions are a combination getter and setter.
 
 jQuery functions will work against an entire wrapped set.
+
+## Finding Parts of a Page
+
+jQuery primarily uses CSS3 selectors.
+
+- **ID:** Unique to a single element. Identified by a `#` prefix.
+- **Class:** - Applied to one or more elements. Identified by a `.` prefix.
+- **Psudeo-Class:** - An element in a particular state. Identified by a `:` prefix.
+
+You can pass a HTML string into the jQuery selector to create a new
+element in memory.
+
+You can also pass raw DOM elements into a jQuery selector to convert
+them into a wrapped set.
