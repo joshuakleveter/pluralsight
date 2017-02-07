@@ -82,3 +82,9 @@ Use the `.click()` function for specific handling of the click event.
 
 jQuery allows us to chain functions with dot notation to avoid the
 inefficiency of re-selecting the elements for every manipulation.
+
+## User Input
+
+The `.val()` function allows us to get/set a value in a input element.
+
+With checkboxes use the `.prop()` function, not the `.attr()` function.
