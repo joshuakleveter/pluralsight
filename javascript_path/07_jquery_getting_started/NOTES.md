@@ -88,3 +88,19 @@ inefficiency of re-selecting the elements for every manipulation.
 The `.val()` function allows us to get/set a value in a input element.
 
 With checkboxes use the `.prop()` function, not the `.attr()` function.
+
+## The Big Picture
+
+Use jQuery 1 if you need oldIE support.
+
+jQuery 2 is a much lighter platform and should be used for almost
+all modern websites / webapps.
+
+jQuery UI provides widgets for ease of use.
+**Such as a date-picker**.
+
+Zepto.JS is for mobile development and has a near identical API to jQuery.
+
+**NOTE:** Use a `$` prefix for jQuery-selected elements. This is a naming
+convention to provide clarity so we can easily see which elements are
+jQuery wrapped sets and which are raw DOM elements.
