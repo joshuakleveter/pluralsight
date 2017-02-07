@@ -45,3 +45,21 @@ element in memory.
 
 You can also pass raw DOM elements into a jQuery selector to convert
 them into a wrapped set.
+
+## Adding Style and Effects
+
+The `.attr()` jQuery function allows us to maniplulate element attributes.
+
+The `.css()` function is preferred when dealing specifically with the
+HTML `style` attribute.
+
+With the `.css()` function we use camelCase rather than hyphenated-syntax
+for the names of CSS rules.
+
+We can use `.addClass()` or `.removeClass()` to add and remove classes.
+
+To hide an element use the `.hide()` function. The `.show()` function
+provides the alternate. To change to the opposite state use the
+`.toggle()` function.
+
+For additional effect we can use `.fadeOut()` and `.fadeIn()`.
