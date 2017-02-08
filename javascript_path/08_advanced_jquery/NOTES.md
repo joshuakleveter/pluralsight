@@ -23,3 +23,15 @@ global scope for easy access.
 Using `function myFunc () { .. }` syntax to declare functions is a bad
 idea as the function will be added to the global scope. Only use of
 the `var` keyword will keep your scope in order.
+
+### Stub Functions
+
+A common way to extend functions is with a _function stub_.
+
+A stub should only be one line of code that calls the new function with
+previous default params hard-coded.
+
+Stub functions should only be used in a stop-gap situation. If you have
+time there are much better routes.
+
+Adding stubs dramatically increases the need for internal documentations.

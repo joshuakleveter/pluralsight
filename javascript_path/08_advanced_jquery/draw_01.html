@@ -17,15 +17,15 @@
     </body>
     <script>
         _KSM = {
-            draw: function (left, top, width, height, stroke, fill) {
-                // Draw something on the canvas
+            draw: function (left, top, width, height) {
+                _KSM.drawNew(left, top, width, height, "black", "silver");
+            },
+            drawNew: function (left, top, width, height, stroke, fill) {
                 var canvas = document.getElementById("theCanvas");
                 if (canvas.getContext) {
                     var context = canvas.getContext("2d");
                     context.strokeStyle = stroke;
                     context.fillStyle = fill;
-
-                    // Params are (left, top, width, height)
                     context.fillRect(left, top, width, height);
                     context.strokeRect(left, top, width, height);
                 }
@@ -34,7 +34,7 @@
         _KSM.draw(); // v1 code
         _KSM.draw(530, 370); // v2 code
         _KSM.draw(100, 100, 440, 280); // v3 code
-        _KSM.draw(120, 120, 400, 240, "burlywood", "lemonchiffon"); // v4 code
+        _KSM.drawNew(120, 120, 400, 240, "burlywood", "lemonchiffon"); // v4 code
     </script>
 </body>
 </html>
