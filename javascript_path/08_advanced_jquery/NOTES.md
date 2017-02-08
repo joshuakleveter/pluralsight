@@ -44,3 +44,10 @@ Omitted params will default to `undefined`.
 
 Use of an excessive number of default params will inevitably lead to
 overly-complex function calls.
+
+### Object Parameters
+
+Use one object to handle all parameters in a function.
+
+Object based params are the most extendable and most legible type
+of function paramters.

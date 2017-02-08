@@ -21,31 +21,51 @@
                 var canvas = document.getElementById("theCanvas");
                 if (canvas.getContext) {
                     var context = canvas.getContext("2d");
-
-                    // Add default params (ES5 style)
-                    if ("undefined" === typeof left) {
-                        left = 10;
+                    
+                    /**
+                     * If the call passes in a an arg list instead of an object
+                     * Convert the arg list to an object.
+                     */
+                    if ("object" != typeof left) {
+                        options = {
+                            left: left,
+                            top: top,
+                            width: width,
+                            height: height,
+                            stroke: stroke,
+                            fill: fill
+                        };
                     }
-                    if ("undefined" === typeof top) {
-                        top = 10;
-                    }
-                    if ("undefined" === typeof width) {
-                        width = 100;
-                    }
-                    if ("undefined" === typeof height) {
-                        height = 100;
-                    }
-                    if ("undefined" === typeof fill) {
-                        fill = "silver";
-                    }
-                    if ("undefined" === typeof stroke) {
-                        stroke = "black";
+                    else {
+                        options = left;
                     }
 
-                    context.strokeStyle = stroke;
-                    context.fillStyle = fill;
-                    context.fillRect(left, top, width, height);
-                    context.strokeRect(left, top, width, height);
+                    /**
+                     * Insert necessary default values.
+                     */
+                    if ("undefined" == typeof options.left) {
+                        options.left = 10;
+                    }
+                    if ("undefined" == typeof options.top) {
+                        options.top = 10;
+                    }
+                    if ("undefined" == typeof options.width) {
+                        options.width = 100;
+                    }
+                    if ("undefined" == typeof options.height) {
+                        options.height = 100;
+                    }
+                    if ("undefined" == typeof options.stroke) {
+                        options.stroke = "black";
+                    }
+                    if ("undefined" == typeof options.fill) {
+                        options.fill = "silver";
+                    }
+
+                    context.strokeStyle = options.stroke;
+                    context.fillStyle = options.fill;
+                    context.fillRect(options.left, options.top, options.width, options.height);
+                    context.strokeRect(options.left, options.top, options.width, options.height);
                 }
             }
         };
@@ -58,6 +78,14 @@
         _KSM.draw(10, 310, 160, 160, "red");
 
         _KSM.draw(270, undefined, undefined, undefined, undefined, "green"); // OUCH!
+
+        _KSM.draw({
+            stroke: "red",
+            left: 140,
+            top: 450,
+            height: 20,
+            width: 360
+        });
     </script>
 </body>
 </html>
