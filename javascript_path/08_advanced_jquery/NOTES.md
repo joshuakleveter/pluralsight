@@ -35,3 +35,12 @@ Stub functions should only be used in a stop-gap situation. If you have
 time there are much better routes.
 
 Adding stubs dramatically increases the need for internal documentations.
+
+### Default Values
+
+JavaScript does not enforce param count.
+
+Omitted params will default to `undefined`.
+
+Use of an excessive number of default params will inevitably lead to
+overly-complex function calls.

@@ -17,13 +17,31 @@
     </body>
     <script>
         _KSM = {
-            draw: function (left, top, width, height) {
-                _KSM.drawNew(left, top, width, height, "black", "silver");
-            },
-            drawNew: function (left, top, width, height, stroke, fill) {
+            draw: function (left, top, width, height, stroke, fill) {
                 var canvas = document.getElementById("theCanvas");
                 if (canvas.getContext) {
                     var context = canvas.getContext("2d");
+
+                    // Add default params (ES5 style)
+                    if ("undefined" === typeof left) {
+                        left = 10;
+                    }
+                    if ("undefined" === typeof top) {
+                        top = 10;
+                    }
+                    if ("undefined" === typeof width) {
+                        width = 100;
+                    }
+                    if ("undefined" === typeof height) {
+                        height = 100;
+                    }
+                    if ("undefined" === typeof fill) {
+                        fill = "silver";
+                    }
+                    if ("undefined" === typeof stroke) {
+                        stroke = "black";
+                    }
+
                     context.strokeStyle = stroke;
                     context.fillStyle = fill;
                     context.fillRect(left, top, width, height);
@@ -34,7 +52,12 @@
         _KSM.draw(); // v1 code
         _KSM.draw(530, 370); // v2 code
         _KSM.draw(100, 100, 440, 280); // v3 code
-        _KSM.drawNew(120, 120, 400, 240, "burlywood", "lemonchiffon"); // v4 code
+        _KSM.draw(120, 120, 400, 240, "burlywood", "lemonchiffon"); // v4 code
+
+        _KSM.draw(530, 10, 100, 100, "red", "teal");
+        _KSM.draw(10, 310, 160, 160, "red");
+
+        _KSM.draw(270, undefined, undefined, undefined, undefined, "green"); // OUCH!
     </script>
 </body>
 </html>
