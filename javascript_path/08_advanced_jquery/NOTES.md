@@ -51,3 +51,8 @@ Use one object to handle all parameters in a function.
 
 Object based params are the most extendable and most legible type
 of function paramters.
+
+You can add new object parameters without breaking legacy code.
+
+Expose default parameters as an object. This allows us to easily change
+default values without breaking leagcy code.
