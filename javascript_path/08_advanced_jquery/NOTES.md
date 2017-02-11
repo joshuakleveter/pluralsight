@@ -257,3 +257,88 @@ the object so it can access the values in that object.
 
 ## jQuery Deferred Objects
 
+Deferred objects allow us an alternative to the complexety of callback funcs.
+
+jQuery's deferred processing utilizes JS Promises rather than callbacks.
+
+Using callback functions results in tightly coupled code that is very
+difficult to segregate if/when needed.
+
+This can be problematic if multiple processes need to execute.
+
+Callbacks often result in timing bugs when  larger content takes longer
+to load than expected and/or load time chagned when the content itself changes.
+
+A common way to resolve the timing issue is to load content within callbacks.
+However, this both eliminates the async nature of the request and results in
+what is known as 'callback hell'. This pattern is also entirely non-scalable.
+
+Use the `.get()` method instead of the `.load()` method. `.get()` is deferred,
+`.load()` is not.
+
+Surround your `.get()` calls in a `$.when()` call. Once the code inside of
+`$.when()` finishes loading call the `$.then()` method.
+
+The `$.when()` method groups one or more deferred processes into a single
+code block.
+
+Working code should give us the result that we want in a way that is
+repeatable, extensable, and maintainable.
+
+Use negative testing to make sure that your code will properly handle errors.
+
+`$.then()` can take a second param (a function) that will be called if there is
+a failure in the `$.when()` block. It is better practice, however, to use the
+`$.fail()` method chained after then `$.then()` method. This will increase
+readability for yourself and other devs in the future.
+
+### Deferred Methods
+
+- Return a deferred object for processing:
+  - `.when()`: Returns a full deferred object to the code for operations.
+  - `.promise()`: Returns deferred object that we cannot change state of.
+- Handler methods for deferred objects:
+  - `.then()`: Follow up for completion of deferred object.
+  - `.done()`: Runs on success of deferred object.
+  - `.fail()`: Runs on deferred object failure.
+  - `.progress()`: Used to keep track of deferred object process.
+  - `.always()`: Always runs regardless of result of deferred object. Runs last.
+- Change the state of the deferred object:
+  - `.resolve()`: Changes state of deferred object to success.
+  - `.reject()`: Changes deferred object to failure state.
+
+Note that the above methods are only available on a full deferred object.
+Not a normal promise object. When we use a promise we know that the client
+cannot change the state of our object.
+
+Use the `.promise()` method to prevent client from acidentally changing the
+state of a deferred object.
+
+One of the biggest advantages of deferred objects over callbacks is that
+we can attach as many handlers to the deferred object as we like, in any
+order that we like. It's also very easy to add flow control logic, etc.
+
+### Dynamic Content
+
+We can use jQuery's `$.Deferred()` method to create our own deferred objects.
+
+When loading pages with dynamic content we must make sure to handle the loading
+of that content within our AJAX loading process.
+
+Once a deferred object can only resolve or reject one time. Once it rejects
+it will immediatly return the error and stop processing, hence we only see
+the first error.
+
+You can fire custom events in pages with dynamic content to tell your script
+when a dynamic page's content is fully loaded.
+
+When you reject a deferred object it will cause the `$.fail()` method to
+run immediatley. The `$.always()` function will be called right after that.
+Keep this in mind!
+
+In many cases it's better to handle all errors at the same time.
+
+Always consider what will happen **when** you get an error.
+
+**IMPORTANT:** Always, always use negative testing to make sure that you
+are correctly handling errors in your code.
