@@ -116,3 +116,144 @@ by the above listed methods:
 - `.die()`
 - `.delegate()`
 - `.undelegate()`
+
+## Advanced Event Handling
+
+All jQuery event handler shorthand methods can be replaced with the
+`.on()` method. The first param is the event type that you want to handle.
+
+One of the biggest advantages of the `.on()` method is that you can
+specify multiple event handlers in a single method call.
+
+So instead of this:
+
+```JavaScript
+$('#button')
+    .click(function(event) {
+        // handle click
+    })
+    .dblclick(function(event) {
+        // handle doubleclick
+    });
+```
+
+We can do this:
+
+```JavaScript
+$('#button)
+    .on('click dblclick', function(event) {
+        // handle click and/or doubleclick
+    });
+```
+
+This makes our code much easier to maintain and read.
+
+Within the `.on()` method you can use the `event.type` property to check for
+specific event types.
+
+**Important:** With a dynaically-loaded script event handlers will be attached
+every time you run the script. As an example; if you refresh the page you will
+attach _another_ event handler and cause the event to fire twice, etc. We can
+prevent this with the use of the `.off()` method.
+
+Usually the `.off()` method is the first method called in the event handler
+chain.
+
+Called without params it will remove _all_ event handlers from the
+object and give you a clean slate to work with.
+**Make sure that this is what you intend to do before you do it!**
+
+Usually we would specify exactly which handlers we want to remove rather
+than removing allof them.
+
+Using named functions in your event handler callbacks allows you to update
+or remove a specific handler rather than changing _all_ handlers associated
+with a specific trigger.
+
+**In summary:** used named functions wherever possible.
+
+Be very careful of which order you load event handlers so that you don't
+accidentally trigger an event without the expected result of the event.
+
+### Event Namespaces
+
+Use of event namespaces makes it much easier to handle the addition and removal
+of events in the correct order.
+
+Syntax is as follows:
+
+```JavaScript
+// Normally we would attach an event like such:
+$('#button')
+    .on('click', function(event) {
+        // handle event
+    });
+
+// Using a namespace looks like this:
+$('#button')
+    .on('click.namespace', function(event) {
+        // handle event
+    });
+```
+
+Event namespaces are non-hierarchical.
+
+We can remove _all_ event handlers for a namespace by just passing the
+namespace name to the `.off()` method.
+
+You can use as many namespaces as you like
+
+### Event Delegation
+
+Traditionally devs have used the `.bind()` method to attach event handler copies
+to other DOM elements. This is non-ideal.
+
+Using the `.on()` method is far more efficient.
+
+To use event delegation with the `.on()` method we pass an optional
+second selector param:
+
+```JavaScript
+$('ul')
+    .on('click', 'li', function(event) {
+        // handle event
+    });
+```
+
+In this example any clicks on an `<li>` element will bubble up and be handled
+by the `<ul>` element.
+
+Delegated event handlers can process events triggered by elements that
+are dynamically added (e.g. AJAX) at a later time.
+
+Target elements that are deep in the DOM can cause a perceptible delay
+in the processing of the event.
+
+### Custom Events
+
+We can create custom event handlers to handle almost any interaction that
+the user can have with the browser.
+
+Use the `.trigger()` method to initiate a custom event.
+
+We can use the `event.data` property provided by jQuery to persist data across
+event triggers and pass data into event handlers.
+
+Custom events have all the same capabilities as standard events.
+
+We can create custom events on DOM elements or objects that are stored
+in memory.
+
+### Event Parameters
+
+We can pass data to event handlers in either the `.trigger()` or `.on()`
+methods. In both cases the data must be an array or object.
+
+We can use this to set the nodeName value for a custom event.
+
+Objects are passed to functions by reference, not value.
+If you pass on object to a function the function will just get a pointer to
+the object so it can access the values in that object.
+
+## jQuery Deferred Objects
+
