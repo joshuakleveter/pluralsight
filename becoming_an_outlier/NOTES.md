@@ -210,3 +210,108 @@ Rethink your meeting schedule!
 
 - Habits are 40% of your day!
 - Live beneath your means!
+
+## Manage Your Image
+
+### Perception is Reality
+
+- People need to recognize you.
+- Networking is critical!
+- The best projects are filled by referral. Not job searches.
+
+### The Dev Image Triagle
+
+- Cheap/Good/Fast - Pick two.
+
+- Pick two of these:
+  - Be easy to work with
+  - Do great work
+  - Deliver on time
+
+- Cordial Craftsman (Great work / Easy to work with)
+  - Managers find them unreliable
+  - They work great as mentors.
+  - They are ivory tower devs.
+  - "Architecture Astronaut"
+- Reliable Robot (Great work / Deliver on time)
+  - Dependable braniac
+  - Smart, but cold.
+- Happy Hacker (Deliver on time / Easy to work with)
+  - Loved by managers.
+  - Quality of solutions is sacrificed.
+  - Debt generator
+- Outliers figure out how to balance _all three_.
+- You _must_ pick at least two.
+
+### Purpose Built
+
+- Be focused on a niche.
+- Rare and focused == expensive.
+- What am I known for?
+- Bring solutions to your boss. **NOT PROBLEMS!**
+- Be optimisic and exceed expectations.
+
+### Self-Image
+
+- Your self-image is your greatest constraint.
+- Don't sell your weaknesses, sell your strengths.
+- Is your self-image holding you back?
+- Who you think you are is often limiting.
+- I am who I think you think I am.
+
+- Hack your self-image.
+  - Start acting like what you want to be!
+  - Change the way you see yourself.
+- Leave to leap.
+  - You may need to leave your job to improve your self image.
+  - It may be time to move on.
+- Are you reaching beyond your comfort zone?
+  - Take scary interviews.
+  - If you're not scared you're not stretching.
+  - Become uncomfortable.
+
+### The Conference Effect
+
+- They know _way_ more than I do!
+- Don't be dissuaded by apparent knowledge of others.
+
+### Can I See Your Work
+
+- Make sure that your work is visible online!
+- If we cannot find you then we're likely not interested.
+- Sell your skills!
+
+### Become a Work Recycler
+
+Learn skills and then:
+
+1. Write a blog post
+2. Tweet about it.
+3. Do a lunch & learn
+4. Speak at a conference
+5. Answer forum questions
+6. Contribute to OSS
+7. Take a side contract
+
+Make all your work public!
+
+### Own Your Work
+
+- Social networks control your content.
+- If you have a blog _you_ control the content.
+- An active blog is an excellent marketing tool.
+- There is _no such thing_ as overnight success.
+
+### Measure Your Brand
+
+- Google Alerts
+- TweetBeep
+- Online ID Calc
+- Bit.ly
+
+### Shelved Creds
+
+- Books are a physical reminder of your skills.
+- They will say a lot about who you are.
+- Conversation starters.
+- _Known_ skills land work.
