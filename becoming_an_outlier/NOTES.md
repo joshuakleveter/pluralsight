@@ -412,3 +412,52 @@ Life falls into 3 levels:
 3. Own - Create your own product (SAAS, PAAS, Authors, etc.)
 
 Are you brave enough to lead?
+
+## The Outlier Challenge
+
+### Act as If
+
+- Act like a thought leader!
+  - Post to your blog.
+  - Write a book.
+  - Start working part time to spend time learning. (BOOM!)
+
+### Manufacture Urgency
+
+- Make commitments.
+- Play mind games
+  - Volunteer to teach a topic that you _want_ to learn.
+  - Announce a planned launch date.
+  - Take a risky interview.
+
+### Increase Your Luck Surface Area
+
+- Do something that you're passionate about and make sure that people know!
+
+1. Speak on topic
+2. Startup weekend
+3. Connect w/ people
+4. Blog / Social Media
+5. OSS
+6. Never eat alone!
+7. Make the Hang (spend time with leaders in your field)
+
+### Chase Your Fears
+
+Find your fear and chase it. Get good at it.
+
+### Choose Yourself
+
+KC Dev Conference.
+
+Be willing to take risk yourself.
+
+Be willing to try and _fail_. Just the fact that you're willing is a big plus.
+
+Choosing hard will separate you from the pack.
+
+### Get Connected
+
+[outlierdeveloper.com](http://outlierdeveloper.com)
+
+Love what you do!
