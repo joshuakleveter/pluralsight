@@ -315,3 +315,100 @@ Make all your work public!
 - They will say a lot about who you are.
 - Conversation starters.
 - _Known_ skills land work.
+
+## Own Your Trajectory
+
+### From Passive to Active
+
+- We often allow circumstance to pick our career.
+- Craft your skill set to the current need _before_ asked to.
+
+Those in the passive mindset will let other things run their lives.
+If you accept this mindset you will not have many options.
+
+Outliers are active. You will decide on a goal and do what it takes
+to get towards that goal.
+
+### Freedom Matters
+
+Strategically position yourself so are free to move on when you need to.
+
+### 2 Keys to Freedom
+
+If you have slack in your finances you can leave your job whenever
+
+If you have in-demand skills you can find another job at a moment's notice.
+
+### Key No. 1 - Finances
+
+Clear your mind. Distractions make you dumber.
+
+Tight finances: mental capacity drops.
+
+Live well underneath your means.
+
+### Key No. 2 - Skills
+
+Regularly audit your skills to make sure that they are relevant.
+
+TIOBE index.
+
+Language demand varies by city. Use Dice.com
+
+Do research for your region!
+
+Is demand outpacing supply in your chosen tech?
+
+The cutting edge and outdated techs will pay more.
+
+Embrace change!
+
+### Programming Your Brain
+
+Watch someone else!
+
+1. Watch someone in action
+2. Experiment with real life.
+3. Teach someone else how to do it.
+
+Never apologize for learning. All of us are always learning in this industry.
+
+### Exploration and Exploitation
+
+Balance learning with implementation!
+
+Make sure to use your new skills to benefit others.
+
+### Assembly Line Coder
+
+- Creates a new X in tech Y every Z days.
+
+This will get you stuck in a rut.
+
+Automate yourself out of a job.
+
+Don't work for money; work to learn.
+
+There is no sideways. You move forward to backward.
+
+### Opportunity Curve
+
+Our opportunities narrow down as we grow older.
+
+An outlier will have consistently relevant skills even when older.
+
+### Search for Scale
+
+You can only sell and hour of your life once. This is non-scalable.
+
+Make your work scalable.
+
+What if every day moved you closer to automated pay?
+
+Life falls into 3 levels:
+
+1. Worker - Do whay told for pay
+2. Leadership - Talk about the work and tell others what to do.
+3. Own - Create your own product (SAAS, PAAS, Authors, etc.)
+
+Are you brave enough to lead?
