@@ -186,3 +186,84 @@ There are 4 rules for creating the `this` binding:
 with a constructor function.
 
 It is impossible to create a crossover between lexical scope and `this` binding.
+
+## Closure
+
+Closure is a mathematical concept from lambda calculus.
+
+**Closure:** When a function remembers and accesses it's lexical scope _even_
+when it's executed well outside of it's lexical scope.
+
+Note that this is _not_ a snapshot of the scope, but a _live link_ back
+to the function's lexical scope.
+
+Closure is possible because of 1st class functions in JS.
+
+As long as there is at least one function with a closure over a scope that
+scope will not be garbage collected.
+
+The entire scope, no matter how nested and deep, is maintained.
+
+Example:
+
+Often people will expect the below example to print 1 through 5 in order.
+However, it will actually print out 6 five times in a row as each of the five
+anonymous callbacks that have been created will close over the same
+global scope.
+
+```javascript
+for (var i = 1; i <= 5; i++) {
+    setTimeout(function() {
+        console.log("i: " + i);
+    }, i * 1000);
+}
+```
+
+Instead we should use an IIFE to create a new scope and `i` variable for each
+callback that will store the correct values for us. Like so:
+
+```javascript
+for (var i = 1; i <= 5; i++) {
+    (function(i) {
+        setTimeout(function() {
+            console.log("i: " + i);
+        }, i * 1000);
+    })();
+}
+```
+
+In that example the callbacks maintain a closure over the IIFE and will log
+the correct numbers for us, as each IIFE is passed a new number value in the
+correct order.
+
+Using `let` in a `for` loop: We may think that `let` is bound to the loop.
+This is not quite true. The `let` not only binds to the loop, but _rebinds_
+`let` for each iteration of the loop. Like using an additional `j` variable
+within the loop.
+
+An object reference passed out of a function and later accessed
+_is not closure_. Closure only occurs with functions transported out of a scope.
+
+The most common closure-based pattern in JS is the _classic module pattern_.
+
+1. There must be an outer wrapping function that is executed to create module
+2. One or more returned functions that have closure over inner scope.
+
+Most often we return an object with pointers to the inner functions as
+our public API.
+
+Encapsulation and hiding what doesn't need to be public.
+This is an application of the Principle of Least Privledge.
+
+There is a variant known as the _Modified Module Pattern_ where we name
+the returned object something like _publicAPI_. This allows us runtime
+access to modify the public API of the module if necessary.
+
+RequireJS, AMD, and other module loaders use what we call the
+_Modern Module Pattern_.  This hides away some of the implementation details.
+
+ES6 adds first-class support for modules with a file-based system.
+This utilizes `export` and `import` syntax.
+
+**Unit Testing:** testing the smallest indivisible section of code.
+This means that we're _not_ testing hidden implementation details.
