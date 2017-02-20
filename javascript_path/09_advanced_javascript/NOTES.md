@@ -357,3 +357,45 @@ that they think.
 
 Classes create a snapshot copy of the parent at a fixed point in time.
 Delegation is a live linkage.
+
+## Async Patterns
+
+The human brain does not think in an async manner.
+
+We need to figure out how to think about async code in a _syncronous_ manner.
+
+Callbacks are the most common pattern, but they really don't work well
+when you have more than one level of callback.
+
+Be careful of _Inversion of Control_.
+
+### Generators
+
+`function* gen() { .. }`
+
+New as of ES6.
+
+Executing a Generator will return an iterator.
+
+You now have the ability to control when and where a function starts
+and stops with `yield` and `.next()`.
+
+`yield` is a 2-way messaging system.
+
+CSP-style (_Continuing Serial Processes_) generators are somthing to keep in mind.
+
+### Promises
+
+`new Promise()`
+
+Standard in ES6
+
+A Promise is basically an IOU.
+
+You could also think of it as a completion event.
+
+Promises allow for synchronous-looking syntax while using async code.
+
+With Promises we can _uninvert_ control.
+
+Takes two function params. One for resolve and one for reject.
