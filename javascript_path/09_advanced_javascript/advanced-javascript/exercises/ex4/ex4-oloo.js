@@ -4,7 +4,7 @@ var Widget = {
         this.height = height || 50;
         this.$elem = null;
     },
-    render: function($where) {
+    insert: function($where) {
         if (this.$elem) {
             this.$elem.css({
                 width: this.width + "px",
@@ -14,37 +14,30 @@ var Widget = {
     }
 };
 
+
 var Button = Object.create(Widget);
-Button.initButton = function(opts) {
-    this.height = opts.height || 50;
-    this.width = opts.width || 50;
-    this.label = opts.label || 'Button';
+Button.setup = function(width, height, label) {
+    this.init(width, height);
+    this.label = label || 'Default';
     this.$elem = $('<button>').text(this.label);
 };
-Button.renderButton = function($where) {
-    this.render($where);
-    this.$elem.on('click', event => {
-        this.onClick(event);
-    });
-};
-Button.onClick = function(event) {
+Button.build = function($where) {
+    this.insert($where);
+    this.$elem.click(this.onClick.bind(this));
+Button.onClick = function() {
     console.log(`Button ${this.label} clicked!`);
 };
 
+
 $(document).ready(function() {
     var $body = $(document.body);
+
     var btn1 = Object.create(Button);
+    btn1.setup(150, 50, 'Hello');
+
     var btn2 = Object.create(Button);
-    btn1.initButton({
-        label: 'Button 1',
-        height: 100,
-        width: 200
-    });
-    btn2.initButton({
-        label: 'Button 2',
-        height: 50,
-        width: 150
-    });
-    btn1.renderButton($body);
-    btn2.renderButton($body);
+    btn2.setup(200, 100, 'World');
+
+    btn1.build($body);
+    btn2.build($body);
 });
