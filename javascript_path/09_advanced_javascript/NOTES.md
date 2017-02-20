@@ -267,3 +267,74 @@ This utilizes `export` and `import` syntax.
 
 **Unit Testing:** testing the smallest indivisible section of code.
 This means that we're _not_ testing hidden implementation details.
+
+## Object Orienting
+
+- Common Patterns
+- Prototypes
+- "Inheritance" vs. "Delegation"
+
+This section is _significantly divergant_ from the mindset of the JS community
+at large. Keep this in mind.
+
+### Prototypes
+
+Every object in JS is built by a Constructor Call.
+
+C++ and Java _should_ be known as _class-oriented_ langs.
+
+JavaScript and Lua are the only languages currently in existence that
+allow you to create an object without a class.
+
+JavaScript _does not_ create objects _based on_ the prototype.
+It creates an object that is _linked to_ the prototype.
+
+`.constructor` is an arbitrary word. Does not mean "constructed by".
+
+`new` keyword:
+
+1. Create a new anonymous object.
+2. Link it to the `.prototype` with [[Prototype]]
+3. Bind `this` to the anonymous object.
+4. Return `this` from the function call.
+
+Prototyping is very similar to the lexical scope model.
+
+[[Prototype]] is a hidden linkage that allows us to traverse the
+prototype chain.
+
+Use of the `new` keyword _does not_ create a `.constructor` property.
+In most cases the prototype chain traversal will happen to find the correct
+`.constructor` property.  _This is not behavior that we can rely on._
+
+`.__proto__`: pronunced "dunder-proto".
+
+`.__proto__` is a getter function. It returns the internal prototype linkage
+of the `this` binding.  In other words: [[Prototype]] is the private, internal
+prototype link. `.__proto__` is the public property.
+
+**NOTE:** `.__proto__` is a non-standard property. It does not exist in oldIE.
+ES6 _finally_ standardized it, and IE11 has it.
+
+ES5, rather than `.__proto__`, has `Object.getPrototypeOf()`. This works in IE9.
+
+In extreme cases we may have to use `.constructor.prototype`. However these are
+writable properties and are generally unreliable.
+
+We can shadow properties on the prototype chain. Note that this will prevent
+us from accessing properties of the same name that are up to prototype chain.
+
+A better syntax in the JavaScript world is to use different method names.
+
+You're generally better off avoiding property shadowing.
+Use delegation to your advantage.
+
+Don't pretend that JS has classes. It doesn't.
+
+`Object.prototype` is the prototype equivalent of the global object in lexical.
+
+`Object.create()` does the first 2 steps of the `new` keyword.
+
+`Object.create()` will throw away your `.constructor()` property and result in
+some odd behavior. To correctly reset the .constructor` property we would have
+to use the `Object.define()` method. But _there is a better way_.
