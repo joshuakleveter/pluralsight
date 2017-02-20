@@ -338,3 +338,22 @@ Don't pretend that JS has classes. It doesn't.
 `Object.create()` will throw away your `.constructor()` property and result in
 some odd behavior. To correctly reset the .constructor` property we would have
 to use the `Object.define()` method. But _there is a better way_.
+
+### Inheritance and OLOO
+
+Classical inheritance creates a copy of a class as on object.
+
+For about 20 years we've been trying to make prototype chains work like
+classical inheritance.
+
+JS does not have "prototypal inheritance". It has _behavior delegation_.
+This method is almost the exact opposite of inheritance.
+
+To contrast the Object-Oriented (OO) methodology we'll use the "OLOO"
+(Objects Linked to Other Objects) pattern.
+
+Biggest pushback to this is that people don't want to change the way
+that they think.
+
+Classes create a snapshot copy of the parent at a fixed point in time.
+Delegation is a live linkage.
