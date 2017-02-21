@@ -29,3 +29,5 @@ function* load(fileArray) {
 }
 
 // Exports ---------------------------------------------------------------------
+
+module.exports = load;
