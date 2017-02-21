@@ -1,17 +1,8 @@
 /**
-* Structure:
-* 
-* - Ajax module
-* 	- Handle AJAX calls
-* 
-* - FileLoader module
-* 	- getFiles() generator
-* 		- Take an Array of filenames
-* 		- Load cocurrently
-* 		- Render in same order as array
-* 	- renderFile()
-*/
-
+ * Module for AJAX requests to a fake data store.
+ * 
+ * @returns {Object.<string, function>}
+ */
 var Ajax = (function ajaxIIFE() {
 	
 	/**
