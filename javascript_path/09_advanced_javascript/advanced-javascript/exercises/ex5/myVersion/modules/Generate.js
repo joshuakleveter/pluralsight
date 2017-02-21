@@ -1,7 +1,6 @@
 // Public API ------------------------------------------------------------------
 
-function run(generator, inputValue) {
-    var value = inputValue || null;
+function run(generator, value = null) {
     var response = generator.next(value);
     
     if (false === response.done) {
