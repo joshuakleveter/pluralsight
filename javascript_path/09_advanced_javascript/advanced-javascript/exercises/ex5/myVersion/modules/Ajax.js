@@ -1,3 +1,4 @@
+// Private Data ----------------------------------------------------------------
 
 var _dataStore = {
     file1: 'This is file number 1.',
@@ -5,7 +6,7 @@ var _dataStore = {
     file3: 'This is the last file.'
 };
 
-// -----------------------------------------------------------------------------
+// Private Functions -----------------------------------------------------------
 
 /**
  * Generate a random time for setTimeout
@@ -16,9 +17,9 @@ function _randomDelay() {
     return (Math.random() * 10000) + 1000;
 }
 
-// -----------------------------------------------------------------------------
+// Public API ------------------------------------------------------------------
 
-export default function get(url) {
+function get(url) {
     var resourcePromise = new Promise(function(resolve, reject) {
         setTimeout(function() {
             if (null != _dataStore[url]) {
@@ -29,4 +30,10 @@ export default function get(url) {
             }
         }, _randomDelay());
     });
+
+    return resourcePromise;
 }
+
+// Exports ---------------------------------------------------------------------
+
+module.exports = get;
