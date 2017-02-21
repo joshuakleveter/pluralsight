@@ -19,7 +19,7 @@ var _dataStore = {
  * @returns {number} Timeout length
  */
 function _randomDelay() {
-    return (Math.random() * 10000) + 1000;
+    return (Math.random() * 1000) + 1000;
 }
 
 // Public API ------------------------------------------------------------------

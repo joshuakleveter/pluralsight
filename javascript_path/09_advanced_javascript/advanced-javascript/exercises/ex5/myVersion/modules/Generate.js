@@ -1,15 +1,16 @@
 // Public API ------------------------------------------------------------------
 
-function run(generator, args) {
-    var response = generator.next(args);
+function run(generator, inputValue) {
+    var value = inputValue || null;
+    var response = generator.next(value);
     
-    while (false == response.done) {
+    if (false === response.done) {
         response.value.then(
             function resolve(value) {
-                generator.next(value);
+                run(generator, value);
             },
             function reject(reason) {
-                generator.next(reason);
+                run(generator, reason);
             }
         );
     }
