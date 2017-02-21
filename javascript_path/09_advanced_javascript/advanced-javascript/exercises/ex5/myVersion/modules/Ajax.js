@@ -1,5 +1,10 @@
 // Private Data ----------------------------------------------------------------
 
+/**
+ * Mock file database.
+ * 
+ * @type {Object.<string, string>}
+ */
 var _dataStore = {
     file1: 'This is file number 1.',
     file2: 'This is the second file.',
@@ -19,6 +24,12 @@ function _randomDelay() {
 
 // Public API ------------------------------------------------------------------
 
+/**
+ * Make a mock AJAX request to our fake database.
+ * 
+ * @param   {string}  url File URL to request
+ * @returns {Promise}     Promise that will resolve to file contents
+ */
 function get(url) {
     var resourcePromise = new Promise(function(resolve, reject) {
         setTimeout(function() {
