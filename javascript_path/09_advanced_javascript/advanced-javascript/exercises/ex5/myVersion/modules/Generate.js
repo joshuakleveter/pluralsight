@@ -1,3 +1,5 @@
+'use strict';
+
 // Public API ------------------------------------------------------------------
 
 function run(generator, value = null) {

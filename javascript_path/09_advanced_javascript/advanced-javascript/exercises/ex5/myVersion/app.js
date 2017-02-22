@@ -1,3 +1,5 @@
+'use strict';
+
 var FileLoader = require('./modules/FileLoader');
 var Generate = require('./modules/Generate');
 
