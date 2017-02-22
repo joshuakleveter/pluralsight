@@ -9,7 +9,9 @@
         "sourceType": "module"
     },
     "rules": {
+        "eqeqeq": "off",
         "no-const-assign": "warn",
+        "no-extra-parens": "off",
         "no-this-before-super": "warn",
         "no-undef": "warn",
         "no-unreachable": "warn",
