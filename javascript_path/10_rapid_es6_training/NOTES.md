@@ -198,3 +198,106 @@ we need to surround the statement in parens.
 Destructuring requires an iterator.
 
 Trailing commas are allowed.
+
+## Modules and Classes
+
+- Module Basics
+- Named Exports
+- Classes
+- `extends` and `super`
+- Constructor function properties
+- Static Members
+- `new.target`
+
+You'll need to use a transpiler and module loader to use ES6 modules at this
+time. Browsers don't support then yet.
+
+### Module Basics
+
+Loading a module will execute it, but only once on the initial load.
+
+Loading a module will automatically enable strict mode in the module.
+
+Use `import` and `export` commands for module communication.
+
+We can export and import as many values as we like.
+
+Using `import { .. } as ..` allows us to create an alias.
+
+`import` statements are hoisted and the modules are immediatley executed.
+
+Using `import` w/o curly braces will import the default export.
+
+If you attempt to import a non-existent default you will get `undefined`.
+
+`import *` will import all exports.
+
+### Named Exports
+
+Named exports are _read only_.
+
+Properties of an exported object, however, are writable.
+
+Modules are live-linked and their internal properties can be edited
+at runtime.
+
+In summary: we are only exporting names, not the actual values / functions.
+This means that if the contained value is updated we will have access
+to the updated value.
+
+### Classes
+
+These are just a wrapper around standard constructor calls.
+
+The `class` itself is a function, and calling `new` on it returns
+an object.
+
+Classes can have a constructor method that is automatically called
+with the `new` keyword.
+
+Using variable declarations in a class will throw a syntax error.
+
+Classes are not hoisted.
+
+You can create a 'class expression'.
+
+Classes cannot be called with the `.call()` function.
+
+Constructor functions are globally spaced, classes are not.
+
+### extends and super
+
+`extends` will create a [[Prototype]] link to the parent class and
+delegate calls to that parent.
+
+`super()` will call the parent classes' functions.
+
+Using the `constructor()` method on an extended class requires the use
+of `super()`
+
+Classes do allow for polymorphism.
+
+`super` is allowed in an object literal.
+
+### Properties for Class Instances
+
+A classes' constructor() method is the equvalent of an ES5 constructor func.
+
+Use the `this` keyword to declare class properties, just like ES5.
+
+### Static Members
+
+Use the `static` keyword to declare static members of a class.
+
+These are accessable without instantiation.  However, static methods are
+not available on the instances of that class.
+
+### new.target
+
+`new.target` points directly to the constructor() method that was initially
+called, not parent classes.
+
+If we don't define a constructor() on a subclass JS will automatically
+create a constructor() for us.
+
+`new.target` allows us to access static methods in the constructor() method.
