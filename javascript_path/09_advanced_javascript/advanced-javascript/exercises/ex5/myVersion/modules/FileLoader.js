@@ -22,7 +22,10 @@ function* load(fileArray) {
 
     for (let i = 0; i < _promiseCache.length; i++) {
         var fileContents = yield _promiseCache[i];
-        Logger(fileContents);
+
+        if (null != fileContents) {
+            Logger(fileContents);
+        }
     }
 
     Logger('Complete!');

@@ -8,8 +8,9 @@ function run(generator, value = null) {
             function resolve(value) {
                 run(generator, value);
             },
-            function reject(reason) {
-                run(generator, reason);
+            function reject(error) {
+                console.log(error);
+                run(generator);
             }
         );
     }
