@@ -472,3 +472,85 @@ of those Promises rejects we will return a rejected Promise.
 
 `Promise.race()` will resolve/reject on the first Promise to complete without
 waiting for the other Promises to complete.
+
+## Arrays and Collections
+
+- There are a number of Array extensions in ES6.
+- We have new ArrayBuffers and TypedArrays.
+- We now have DataView objects and Endianness.
+- Maps and WeakMaps have been added.
+- Sets and WeakSets have been added.
+- Array subclassing is now allowed.
+
+### Array Extensions
+
+In ES5 if we pass the Array() constructor a single numeric value we will
+get an array of that length filled with undefined values.
+ES6 adds `Array.of()` to fix this.
+
+`Array.from()` creates a new array from an iterable, manipulated by
+a function.
+
+`.fill()`: replace the values in an array with a new value.
+A second parameter allows for a start index, and the third is for a stop index.
+
+`.find()`: Returns the first value matching a search function.
+
+`.findIndex()`: Same as `.find()`, but returns the index.
+
+`.copyWithin()`: Copy data within an array.
+
+`.entries()`: Get index / value pairs of an array.
+
+`.keys()`: Get index values of an array.
+
+`.values()`: Get values of an array.
+
+### ArrayBuffers and Typed Arrays
+
+ArrayBuffers are arrays of bytes.
+
+Typed Arrays exist on top of ArrayBuffers and allow us to interface with them.
+
+### DataView and Endianness
+
+Big Endian or Little Endian
+
+A DataView allows us to control a buffer.
+
+DataViews can be set to a subsection of a buffer.
+
+DataViews default to Big Endian mode.
+
+### Map and WeakMap
+
+We've already been using Objects as maps in JavaScript.
+
+WeakMaps will allow for automatic garbage collection within the WeakMap.
+
+We can use Objects as keys in Maps and WeakMaps.
+
+- `.set()` add value to a Map.
+- `.delete()` remove a value
+- `.clear()` remove all data from Map.
+- `new Map()` use an iterable to create a Map.
+
+We cannot access size on a WeakMap.
+
+### Set and WeakSet
+
+Similar to Maps, but with no keys.
+
+Think of it as an array of unique values, like an enum.
+
+We _can_ pass two 'identical' object literals into a set and store both.
+
+WeakSet requires objects, not primitives.
+
+### Subclassing
+
+Transpilers do not support subclassing.
+
+Using class syntax we can extend built-in Objects
+
+This allows us to add new properties and methods to built-in Objects.
