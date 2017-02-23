@@ -403,3 +403,72 @@ options as to how built-in functions will be treated.
   - Classes return thier own name, and class methods return their own name.
   - This is non-writable.
   - Use `Object.defineProperty()`
+
+## Iterators, Generators, and Promises
+
+### Iterators
+
+Arrays now have a `myArr[Symbol.iterator]` property.
+
+The iterator is a function.
+
+Iterators have a `.next()` function to advance the iterator.
+`.next()` returns an object with two properties: `done` and `value`.
+
+We can declare our own iterators if we like using `Symbol.iterator`.
+
+You can use a `for ... of` loop to consume a custom iterator.
+
+Spread operators also work off of an iterator.
+
+### Generators
+
+A function that does not necessarily run to completion.
+
+Syntax: `function* funcName() { .. }`
+
+Calling a generator will return an iterator. We then run the function
+body with the iterator.
+
+Generators can be controlled by a `for ... of` loop.
+
+### Yielding in Generators
+
+`yield` does not need to return a value.
+
+We can also use `yield` to input data into the generator.
+
+`yield` has a low precidence.
+
+`yield*` takes another iterable and hands control from the generator to that
+iterable. Once that iterable is consumed it returns back to the main generator.
+
+We can use `.throw()` on an iterator to throw errors.
+Make sure that you have a try/catch block if you're using this.
+
+Use `.return()` for generator cleanup.
+
+### Promises
+
+An object that is waiting for an async process to complete.
+
+The Promise has built-in resolve and reject handlers.
+
+Use `.then()` to handle promise completion.
+
+You can chain `.then()` calls.
+
+We can use `.catch()` to handle rejected Promises.
+
+If we return a Promise from another Promise our `.then()` call get handle
+the _returned_ Promise.
+
+`Promise.resolve` will auto-resolve.
+
+`Promise.reject` will auto-reject.
+
+`Promise.all()` will wait for _all_ passed Promises to complete.  If even one
+of those Promises rejects we will return a rejected Promise.
+
+`Promise.race()` will resolve/reject on the first Promise to complete without
+waiting for the other Promises to complete.
