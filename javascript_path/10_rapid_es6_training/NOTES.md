@@ -599,3 +599,44 @@ Reflect is an Object. Like Math.
 
 - `Reflect.preventExtensions()`: Prevent extensions to objects.
 - `Reflect.isExtensible()`: Check if we can extend an object.
+
+## The Proxy API
+
+An object that wraps another object and controls access to it.
+
+- Defining Proxies
+- Available Traps
+- Get by Proxy
+- Calling Functions
+- Proxies as Prototypes
+- Revocable Proxies
+
+### Proxies Defined
+
+- Target: Main object that we're working with.
+- Handler Object: Wraps the main object (Handler / Proxy)
+- Traps: Methods on the handler to control access.
+  - get(), set(), etc.
+
+We use the Reflect API functions to work with out targets.
+
+### Available Traps
+
+See the Reflect API.
+
+`handler.whateverReflectAPIMethodYouLikeGoesHereExceptThisOne()`
+
+- Untrappable:
+  - equality
+  - typeof, instanceof
+  - operations
+  - wrapping functions.
+
+### Other Notes
+
+Proxy requires `new`.
+
+We can use a Proxy as a prototype of an object.
+This allows to run whatever code we want from an object.
+
+Use `Proxy.revocable()` to create a revokable proxy. Don't use `new` with this.
