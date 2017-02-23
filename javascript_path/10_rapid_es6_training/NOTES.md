@@ -301,3 +301,105 @@ If we don't define a constructor() on a subclass JS will automatically
 create a constructor() for us.
 
 `new.target` allows us to access static methods in the constructor() method.
+
+## New Types and Object Extensions
+
+- Symbols
+- Well-known Symbols
+- Object Extensions
+- String Extensions
+- Number Extensions
+- Math Extensions
+- RegExp Extensions
+- Function Extensions
+
+### Symbols
+
+Symbols are a unique ID. However, we have no access to that ID as
+a developer.
+
+Symbols are a new type.
+
+We can give a symbol a human-readable string to identify the symbol
+in development.
+
+We have a built-in symbol registry that we can access with `Symbol.for()`
+
+`Symbol.keyFor()` returns the debug string of a symbol.
+
+Symbols can be used as unique property names on objects.
+
+Using a symbol as a property name makes it non-available to
+`Object.getOwnPropertyNames()`.
+
+### Well-Known Symbols
+
+Symbol.toStringTag allows us to set the return a specific string from
+an object's .toString method.
+
+Symbol.isConcatSpreadable can be set to false to prevent spreading
+an array with concat.
+
+Well-known symbols act as meta-programming controllers to set various
+options as to how built-in functions will be treated.
+
+### Object
+
+- `Object.setPrototypeOf()`: set a prototype chain for an Object.
+- `Object.assign()`: Populate a target object with the other params.
+  - Later params override eariler ones.
+  - Properties must be enumberable.
+  - The prototype chain is not walked.
+- `Object.is()`: Alternate for `===`
+  - NaN === NaN with this methods.
+  - 0 === -0, but Object.is returns false.
+- `Object.getOwnPropertySymbols()`: See symbol properties of an Object.
+
+### String
+
+- `.startsWith()`: check the prefix of a string.
+- `.endsWith()`: check the suffix of a string.
+- `.includes()`: check for a substring within a string.
+- `\u{}`: new Unicode syntax.
+  - the `.length` property of a unicode symbol is inaccurate.
+  - Use `Array.from().length` instead.
+- `.normalize()`: Fix the length of a string with unicode accents.
+  - Convert unicode values to ASCII
+- `.fromCodePoint()`: see the unicode value of a point.
+- `String.raw()`: Don't process escape chars.
+- `.repeat()`: Repeat a string instance.
+
+### Number
+
+- `Number.parseInt()`: use instead of `parseInt()`.
+- `Number.parseFloat()`: use instead of `parseFloat()`
+- `Number.isNaN()`: use instead of global `isNaN()`
+- `Number.isFinite()`: use instead of global `isFinite()`
+- `Number.isInteger()`: check for floats and other non-ints.
+- `Number.isSafeInteger()`: Check for floats that are safe integers.
+- `Number.EPSILON`, `Number.MAX_SAFE_INTEGER`, and `Number.MIN_SAFE_INTEGER`
+  - New constants on the Number object.
+
+### Math
+
+- New hyperbolic functions.
+- New arithmatic functions.
+- New misc. functions.
+
+- `Math.sign()`: Binary signing of numbers.
+- `Math.cbrt()`: cubic roots.
+- `Math.trunc()`: Truncate float to a decimal.
+
+### RegExp
+
+- Supports astoral-plane unicode with the `/u` flag.
+- New `/y` flag to search from the last index, and last index _only_.
+- `.flags` property to see what flags were set. ALways returns 'gimuy' order.
+
+### Functions
+
+- New `.name` property: Get name of the function.
+  - Anonymous functions take the variable name as the `.name` property.
+  - Classes return thier own name, and class methods return their own name.
+  - This is non-writable.
+  - Use `Object.defineProperty()`
