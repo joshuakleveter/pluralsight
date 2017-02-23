@@ -554,3 +554,48 @@ Transpilers do not support subclassing.
 Using class syntax we can extend built-in Objects
 
 This allows us to add new properties and methods to built-in Objects.
+
+## The Reflect API
+
+- Object Construction
+- Method Calls
+- Prototypes
+- Properties
+- Property Extensions
+
+Allows for use with DSL (Domain-Specific Language)
+
+### Object Construction and Method Calls
+
+Reflect is an Object. Like Math.
+
+- `Reflect.construct()`: Instantiate a class
+  - This allows us to set `new.target`
+- `Reflect.apply()`: Call a function.
+  - Allows for `this` binding.
+  - Allows for calling non-instantiated classes via prototype.
+  - Takes an arg array.
+
+### Reflect and Prototypes
+
+- `Reflect.getPrototypeOf()`: get prototype of object/class.
+- `Reflect.setPrototypeOf()`: set a prototype.
+
+### Reflect and Properties
+
+- `Reflect.get()`: get a property value.
+  - Works with getter functions.
+  - Allows for `this` binding.
+- `Reflect.set()`: set a property value.
+  - Works with setters.
+  - Allows for `this` binding.
+- `Reflect.has()`: check for property existence.
+- `Reflect.ownKeys()`: Get property keys from Object.
+- `Reflect.defineProperty()`: Define a property on a class.
+- `Reflect.deleteProperty()`: Delete a property.
+- `Reflect.getOwnPropertyDescriptor()`: Full descriptor object of a property.
+
+### Reflect and Property Extensions
+
+- `Reflect.preventExtensions()`: Prevent extensions to objects.
+- `Reflect.isExtensible()`: Check if we can extend an object.
