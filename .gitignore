@@ -2,7 +2,7 @@
 
 ## Node Modules
 
-node_modules
+**/**/node_modules
 
 ## Visual Studio Code configuration
 .vscode
