@@ -4,3 +4,6 @@
 [submodule "Pluralsight_JavaScriptPath"]
 	path = Pluralsight_JavaScriptPath
 	url = git@github.com:joshuakleveter/Pluralsight_JavaScriptPath.git
+[submodule "Pluralsight_NodejsPath"]
+	path = Pluralsight_NodejsPath
+	url = git@github.com:joshuakleveter/Pluralsight_NodejsPath.git
