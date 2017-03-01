@@ -1,0 +1,22 @@
+# NPM Playbook - Advanced NPM
+
+- Installing from Git repos
+  - `npm install` + git repo URL.
+- Installing from a Gist
+  - `npm install gist:` +  Gist hash
+  - The Gist _must_ have a `package.json` file.
+- Installing from a folder
+  - `npm install` + path to folder
+- NPM registry
+  - Stores info about every package available
+  - `npm.im/` + package name: go to package page.
+- NPM search
+  - CLI search is slow and less than useful
+  - Website search is preferable
+- Pruning
+  - `npm prune`: remove extraneous packages
+  - `--production`: flag to remove all dev deps and shrink package size
+- `npm repo`: go to the Git repo for a package
+- NPM scripts
+  - `npm test`: script for running tests on the package.
+  - `npm start`: script to start the project.
