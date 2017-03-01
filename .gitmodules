@@ -1,3 +1,6 @@
 [submodule "Pluralsight_BecomingAnOutlier"]
 	path = Pluralsight_BecomingAnOutlier
 	url = git@github.com:joshuakleveter/Pluralsight_BecomingAnOutlier.git
+[submodule "Pluralsight_JavaScriptPath"]
+	path = Pluralsight_JavaScriptPath
+	url = git@github.com:joshuakleveter/Pluralsight_JavaScriptPath.git
